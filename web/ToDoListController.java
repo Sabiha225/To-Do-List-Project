@@ -43,12 +43,12 @@ public class ToDoListController {
 	}
 	
 	@GetMapping("/get/{id}")  // 200 OK
-	public ToDoList getCinemaID(@PathVariable Integer id) {
+	public ToDoList getToDoListID(@PathVariable Integer id) {
 		return this.service.getOne(id);
 	}
 	@PutMapping("/replace/{id}") // 202 accepted
-	public ResponseEntity<ToDoList> replaceCinema(@PathVariable Integer id, @RequestBody ToDoList newCinema) {
-		ToDoList body = this.service.replace(id, newCinema);
+	public ResponseEntity<ToDoList> replaceCinema(@PathVariable Integer id, @RequestBody ToDoList newToDoList) {
+		ToDoList body = this.service.replace(id, newToDoList);
 		ResponseEntity<ToDoList> response = new ResponseEntity<ToDoList>(body, HttpStatus.ACCEPTED);
 		return response;
 	}

@@ -58,5 +58,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 				this.repo.deleteById(id); //DELETE FROM ToDoList WHERE id= 
 			}
 
+			public List<ToDoList> getAllbytask(String task) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
 	}
 
